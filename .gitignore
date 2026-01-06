@@ -1,0 +1,60 @@
+# Xcode
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcodeproj/project.xcworkspace/
+*.xcworkspace/*
+!*.xcworkspace/contents.xcworkspacedata
+!*.xcworkspace/xcshareddata/
+
+# Build
+build/
+DerivedData/
+*.build/
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.swiftpm/
+Packages/
+Package.pins
+Package.resolved
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/Build/
+
+# User-specific
+xcuserdata/
+*.xcuserdatad/
+*.xccheckout
+*.xcscmblueprint
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# OS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# IDE
+*.swp
+*.swo
+*~
+.idea/
+*.iml
+
+# Secrets (if any)
+*.pem
+*.p12
+*.mobileprovision
+Secrets/
