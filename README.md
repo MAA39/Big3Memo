@@ -57,6 +57,7 @@ Apple Watchだけで記録を完結させ、iPhoneは事前設定と振り返り
 - **UI**: SwiftUI
 - **iPhone ↔ Watch連携**: WatchConnectivity
 - **データ永続化**: UserDefaults（設定）/ SwiftData（履歴・将来）
+- **ヘルスケア**: HealthKit（ワークアウト記録）
 - **Haptic**: WKInterfaceDevice
 - **バックグラウンド**: WKExtendedRuntimeSession
 
@@ -64,28 +65,44 @@ Apple Watchだけで記録を完結させ、iPhoneは事前設定と振り返り
 
 ```
 Big3Memo/
-├── Big3Memo/                    # iOS App
-│   ├── App/
-│   ├── Views/
-│   ├── Models/
-│   ├── Managers/
-│   └── Resources/
-├── Big3MemoWatch/               # watchOS App
-│   ├── App/
-│   ├── Views/
-│   ├── Managers/
-│   └── Resources/
-└── Shared/                      # 共有コード
-    ├── Models/
-    └── Connectivity/
+└── Big3MemoApp/
+    ├── Big3MemoApp.xcodeproj        # Xcodeプロジェクト
+    ├── Big3MemoApp/                 # iOS App
+    │   ├── Big3MemoAppApp.swift
+    │   └── Views/
+    │       ├── Home/
+    │       │   ├── HomeView.swift
+    │       │   └── PlanSetupView.swift
+    │       └── Components/
+    │           └── PlateCalculatorView.swift
+    ├── Big3MemoApp Watch App/       # watchOS App
+    │   ├── Big3MemoAppApp.swift
+    │   └── Views/
+    │       ├── WorkoutTabView.swift
+    │       ├── ActiveWorkoutView.swift
+    │       └── RestTimerView.swift
+    ├── Shared/                      # 共有コード
+    │   ├── Models/
+    │   │   ├── ExerciseType.swift
+    │   │   ├── ExercisePlan.swift
+    │   │   ├── WorkoutSet.swift
+    │   │   └── TodayWorkout.swift
+    │   ├── Connectivity/
+    │   │   ├── ConnectivityManager.swift
+    │   │   └── ConnectivityMessage.swift
+    │   └── Managers/
+    │       └── HealthKitManager.swift
+    ├── Big3MemoAppTests/            # iOSテスト
+    ├── Big3MemoAppUITests/          # iOS UIテスト
+    ├── Big3MemoApp Watch AppTests/  # watchOSテスト
+    └── Big3MemoApp Watch AppUITests/ # watchOS UIテスト
 ```
 
 ## セットアップ
 
-1. Xcodeで `File → New → Project → iOS App with Watch App` を選択
-2. Product Name: `Big3Memo`
-3. Interface: SwiftUI
-4. Watch App: Include Watch App にチェック
+1. リポジトリをクローン
+2. `Big3MemoApp/Big3MemoApp.xcodeproj` をXcodeで開く
+3. 実機またはシミュレータでビルド・実行
 
 ## ライセンス
 
