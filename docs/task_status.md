@@ -1,0 +1,42 @@
+# Big3Memo Development Tasks
+
+- [x] Project Initialization
+    - [x] Create GitHub Repository
+    - [x] Create new Xcode project `Big3MemoApp` (iOS App with Watch App)
+- [x] Copy `Shared` folder to new project
+- [x] Copy iOS `Views` to new project
+- [x] Copy watchOS `Views` to new project
+- [x] Add code files to main app targets (iOS and Watch)
+- [x] Configure Build Settings (Signing, Capabilities)
+- [x] Debug and Fix Build Errors
+    - [x] Fix missing imports (Combine, etc.)
+    - [x] Fix async/await bridging in HealthKitManager
+    - [x] Fix initializer missing arguments (WorkoutSet)
+    - [x] Fix protocol conformance issues (HealthKitManager)
+    - [x] Fix mutability issues (TodayWorkout let/var)
+    - [x] Fix ForEach ID ambiguity (HomeView)
+    - [x] Fix Binding syntax (PlanSetupView)
+    - [x] Fix property name mismatch (ExercisePlan)
+    - [x] Fix Info.plist permissions (HealthKit)
+- [x] Implement Core Logic
+    - [x] ExerciseType.swift
+    - [x] WorkoutSet.swift
+    - [x] ExercisePlan.swift
+    - [x] TodayWorkout.swift
+    - [x] ConnectivityMessage.swift
+    - [x] WorkoutSet.swift (Add RPE)
+    - [x] ConnectivityManager.swift (WatchConnectivity)
+    - [x] HealthKitManager.swift (HKWorkoutSession)
+- [/] Verification and Testing
+    - [x] Build and Run iOS App
+    - [x] Build and Run Watch App
+    - [ ] Verify Connectivity (iPhone -> Watch)
+    - [ ] Verify Workout Session (Watch)
+- [ ] iOS App Implementation
+    - [ ] Main Tab View
+    - [ ] Home/Menu Setting View (Plate Calculator)
+    - [ ] History View
+- [ ] Watch App Implementation
+    - [ ] Menu View (Smart Stack Widget)
+    - [ ] Workout Recording View (Digital Crown Acceleration, Double Tap)
+    - [ ] Rest Timer View (Background, Pre-notification)
