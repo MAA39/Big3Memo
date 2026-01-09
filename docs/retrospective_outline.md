@@ -41,3 +41,13 @@
 *   **スモールスタート**: 「全部入り」ではなく「機能の足し算」で進める。
 *   **環境への対抗策**: 開発ツール（Xcode/Simulator）の不安定さを前提にした設計にする。
 *   **メンタル維持**: 「動く画面」を常に手元に置いておくことの重要性。
+
+## 6. 番外編：AIとの協働プロセス振り返り (Collaboration)
+詳説: [Collaboration Retrospective](retrospective/collaboration_retrospective.md)
+*   技術的な問題だけでなく、「AIと人間のコミュニケーション」において何がボトルネックだったかを分析。
+*   「認識のズレ」や「指示出しのコツ」についてまとめています。
+
+## 7. 技術補足：Xcode設定管理の手法 (Technical Note)
+詳説: [Xcode Configuration Practices](retrospective/xcode_configuration_practices.md)
+*   今回問題となった `project.pbxproj` の扱いや `Info.plist` の管理について。
+*   手動管理、xcconfig、XcodeGenなどのモダンな手法の比較調査まとめ。
